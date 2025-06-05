@@ -1,11 +1,11 @@
-import type { Todo } from "./TodoRoot";
+import { type Todo, useTodoStore } from "../store/todoStore";
 
 interface Props {
   todo: Todo;
-  deleteTodo: (id: number) => void;
 }
+export default function TodoItem({ todo }: Props) {
+  const deleteTodo = useTodoStore((state) => state.deleteTodo);
 
-export default function TodoItem({ todo, deleteTodo }: Props) {
   return (
     <li style={{ display: "flex", alignItems: "center", marginBottom: 8 }}>
       <span style={{ flex: 1 }}>• {todo.text}</span>

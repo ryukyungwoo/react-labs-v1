@@ -1,11 +1,9 @@
 import { useState } from "react";
+import { useTodoStore } from "../store/todoStore";
 
-interface Props {
-  addTodo: (text: string) => void;
-}
-
-export default function TodoInput({ addTodo }: Props) {
+export default function TodoInput() {
   const [input, setInput] = useState("");
+  const addTodo = useTodoStore((state) => state.addTodo);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -16,10 +14,13 @@ export default function TodoInput({ addTodo }: Props) {
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: "flex", gap: 8, marginBottom: 20 }}>
+    <form
+      onSubmit={handleSubmit}
+      style={{ display: "flex", gap: 8, marginBottom: 20 }}
+    >
       <input
         value={input}
-        onChange={e => setInput(e.target.value)}
+        onChange={(e) => setInput(e.target.value)}
         placeholder="할 일 추가하기"
         style={{ flex: 1, padding: 8 }}
       />

@@ -1,6 +1,9 @@
-import TodoRoot from "./TodoRoot";
+import TodoRoot from "./components/TodoRoot";
 
 export default function App() {
-  return (<div><TodoRoot /></div>)
-  
+  return (
+    <div>
+      <TodoRoot />
+    </div>
+  );
 }

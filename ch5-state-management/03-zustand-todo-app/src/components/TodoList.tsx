@@ -1,17 +1,13 @@
+import { useTodoStore } from "../store/todoStore";
 import TodoItem from "./TodoItem";
-import type { Todo } from "./TodoRoot";
 
-interface Props {
-  todos: Todo[];
-  deleteTodo: (id: number) => void;
-}
-
-export default function TodoList({ todos, deleteTodo }: Props) {
+export default function TodoList() {
+  const todos = useTodoStore((state) => state.todos);
   return (
     <ul style={{ listStyle: "none", padding: 0 }}>
-      {todos.map(todo =>
-        <TodoItem key={todo.id} todo={todo} deleteTodo={deleteTodo} />
-      )}
+      {todos.map((todo) => (
+        <TodoItem key={todo.id} todo={todo} />
+      ))}
     </ul>
   );
 }
