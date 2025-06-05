@@ -11,10 +11,7 @@ export default function PostDetailPage() {
     <div>
       <h2>{post.title}</h2>
       <p>{post.body}</p>
-      <Link to={`/posts/${post.id}/edit`} style={{ marginRight: 8 }}>
-        글 수정
-      </Link>
-      <Link to="/posts">← 목록으로</Link>
+      <Link to="/posts">목록으로</Link>
     </div>
   );
-} 
+}

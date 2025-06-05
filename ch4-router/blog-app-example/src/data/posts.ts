@@ -1,5 +1,5 @@
 export const posts = [
-  { id: 1, title: "리액트 라우터 기본기", body: "react-router-dom은..." },
-  { id: 2, title: "TypeScript 시작하기", body: "tsconfig, 타입 선언..." },
-  { id: 3, title: "리액트 상태관리", body: "useState, useReducer, ..." },
-]; 
+  { id: 1, title: "리액트 컴포넌트", body: "리액트 컴포넌트는..." },
+  { id: 2, title: "JavaScript와 TypeScript", body: "두 언어의 차이는..." },
+  { id: 3, title: "Next.js란?", body: "Next.js는 ..." },
+];

@@ -1,7 +1,8 @@
 import { posts } from "../data/posts";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function PostListPage() {
+  const navigate = useNavigate();
   return (
     <div>
       <h2>전체 게시글</h2>
@@ -12,7 +13,7 @@ export default function PostListPage() {
           </li>
         ))}
       </ul>
-      <Link to="/posts/new">+ 새 글 작성</Link>
+      <button onClick={() => navigate("/posts/new")}>새 게시글 작성</button>
     </div>
   );
-} 
+}
