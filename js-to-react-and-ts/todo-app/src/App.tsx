@@ -1,10 +1,10 @@
 import "./App.css";
-import QuickMathGame from "./labs/04-summary/QuickMathGame";
+import TodoPage from "./page/TodoPage";
 
 function App() {
   return (
     <>
-      <QuickMathGame />
+      <TodoPage />
     </>
   );
 }

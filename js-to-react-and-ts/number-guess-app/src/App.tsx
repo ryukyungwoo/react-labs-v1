@@ -1,10 +1,10 @@
 import "./App.css";
-import QuickMathGame from "./labs/04-summary/QuickMathGame";
+import NumberFrontPage from "./pages/NumberFrontPage";
 
 function App() {
   return (
     <>
-      <QuickMathGame />
+      <NumberFrontPage />
     </>
   );
 }
